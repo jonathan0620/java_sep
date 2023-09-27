@@ -1,0 +1,31 @@
+package 배열응용고급;
+
+import java.util.Arrays;
+import java.util.Random;
+import java.util.Scanner;
+
+public class 배열입력저장최소최대 {
+
+	public static void main(String[] args) {
+		//A.입력 B.처리 C.출력
+		int[] arr = new int[10];
+		//{0,0,0,0 ''' 0}, <--자동 초기화
+		Scanner sc = new Scanner(System.in);				
+		for (int i = 0; i < arr.length; i++) { // 0~9, 10번 반복
+			System.out.print("숫자 입력 >> ");
+			arr[i] = sc.nextInt();
+		}
+		
+		//B.처리
+		Arrays.sort(arr); //파괴형 함수, 오름차순 정렬
+		System.out.println(Arrays.toString(arr)); //[] 배열 안에 숫자 정렬
+		int max = arr[arr.length-1];
+		int min = arr[0];
+		
+		
+		System.out.println("최댓값 >> " + max);
+		System.out.println("최솟값>> " + min);
+	}
+	
+
+}
